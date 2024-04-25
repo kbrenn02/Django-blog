@@ -1,0 +1,12 @@
+What is Django?
+- A web application framework built with Python that allows us to easily create dynamic web apps using Python.
+- It helps with all the server side things (requests, authentication, etc.)
+
+Django documentation is also really good and details, with examples and tutorials for many of the answers
+
+1. Make sure django is installed on your computer ("pip install django")
+2. Navigate to the file on your computer that you want to make the project in ("cd [path]")
+3. Start the Django project ("django-admin startproject [projectname]")
+    - When you open up the created folder, there will be another folder with your project name. This is the core app of the project
+4. Then navigate into the project folder ("cd [projectname]")
+5. Run the project ("python manage.py runserver")
