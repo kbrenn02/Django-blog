@@ -16,3 +16,12 @@ How do urls.py and views.py work?
 2. The urls.py file receives and reads the requested url
 3. After reading this url, it decides which function to fire in views.py
 4. Once the view is determined, the views.py file sends the response to the browser
+
+
+To bring in HTML templates, create a templates folder that is at the same level as the application.
+Create separate html files in the templates folder for each page.
+In the views.py page in your app, import the render module. Return a render -- it always takes the request as the first arguement
+The second arguement will be the name of the html templates
+ALSO, you need to go to the settings.py file, scroll down to the templates section, and add the directory when the templates are found (in the templates folder)
+
+Creating separate apps for different parts of the project:
