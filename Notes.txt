@@ -59,3 +59,20 @@ Every time we want to migrate info, we have to create a migration file
 Every time we create a model, we have to do these two steps
 
 The Django ORM: (to interact with a DB)
+To interact with the db, we open a shell ("python manage.py shell")
+From there, we import the Article model ("from articles.models import Article")
+To create a new article object, we type: "[name] = Article()"
+From there we can set the title (and other attributes): "[name].title = "title" "
+To save the article, type: [name].save()
+To view all articles we've created, run: "Article.objects.all()"
+use control Z (^Z) to exit the shell environment
+
+Django Admin: (control the content of the site)
+- create a superuser
+    - "python manage.py runserver"
+    - create username (kevinbrennan in this case)
+    - email: you can add or leave blank. I left blank
+    - password: add password (test1234 for this)
+
+If we want models we create to show up in the admin portal, we have to register the models. 
+This is done by going to the admin.py file in the app with the model you want to add to admin (articles.admin.py)

@@ -9,3 +9,6 @@ class Article(models.Model):
     # later add: thumbnail, author
     # thumbnail = models.ImageField
     # author = models.CharField
+
+    def __str__(self):  # added this so that when we work in the shell environmnet, we see the title of the article objects we create
+        return self.title
