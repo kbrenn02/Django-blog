@@ -49,3 +49,13 @@ in the code:
 each row in the table represents a record.
 Models in the code allow us to create new records and store them in the DB table
 Make the models in the models.py file. After making the models, you need to do a migration so the model shows in the database table
+
+Migrations:
+When we make a model, we have to migrate the model to the DB, then the DB knows to create a table with the right columns
+in terminal, run: "python manage.py migrate" (for all the ones pre-made by django)
+Every time we want to migrate info, we have to create a migration file
+    -To do this, run: "python manage.py makemigrations"
+    -Then run: "python manage.py migrate"
+Every time we create a model, we have to do these two steps
+
+The Django ORM: (to interact with a DB)
