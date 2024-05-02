@@ -85,3 +85,8 @@ Model methods:
 Within models, you can add functions/methods. You do this by declaring "def [name](self):" 
 The self implies that it is referencing the article/object itself and allows you to call on other attributes of the self
 Then you can call the methods like you would normal python code. In this example, we called the method in the template tag
+
+Static Files & Images: (images, CSS/Javascript files)
+- We can't just reference paths in our file, we actually have to embed them
+To do this, we need to update the urls.py file in our main app to allow the intake of images via urls
+Then go to settings.py, scroll to the bottom and see that we already have a thing for STATIC_URL (and a path to find static files)

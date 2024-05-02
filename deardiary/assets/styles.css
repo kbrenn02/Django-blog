@@ -1,0 +1,21 @@
+
+body {
+    background-color: #0f121f;
+    background-image: url(stars.png);
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+body *{
+    font-family: Ubuntu, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+a, a:hover, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
