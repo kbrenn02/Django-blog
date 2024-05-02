@@ -6,5 +6,15 @@
     </head>
     <body>
         <h1>Article list</h1>
+        <div class="articles">
+            <!-- {%  curly % % curly -- this is used for python code like for loops.  two sets of curly braces {{ -- this is used for actual date, like article.title -->
+            {% for article in articles %}
+                <div class="article">
+                    <h2><a href="#">{{ article.title }}</a></h2>
+                    <p>{{ article.body }}</p>
+                    <p>{{ article.date }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>

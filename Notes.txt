@@ -76,3 +76,9 @@ Django Admin: (control the content of the site)
 
 If we want models we create to show up in the admin portal, we have to register the models. 
 This is done by going to the admin.py file in the app with the model you want to add to admin (articles.admin.py)
+
+Template Tags (output dynamic data into our templates using template tags)
+- template tags are a way for us to output some python code into an html template (ex: the articles that are made
+    are made in python. We render that data in html)
+
+Model methods:
