@@ -82,3 +82,6 @@ Template Tags (output dynamic data into our templates using template tags)
     are made in python. We render that data in html)
 
 Model methods:
+Within models, you can add functions/methods. You do this by declaring "def [name](self):" 
+The self implies that it is referencing the article/object itself and allows you to call on other attributes of the self
+Then you can call the methods like you would normal python code. In this example, we called the method in the template tag

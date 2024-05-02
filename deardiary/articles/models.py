@@ -12,3 +12,6 @@ class Article(models.Model):
 
     def __str__(self):  # added this so that when we work in the shell environmnet, we see the title of the article objects we create
         return self.title
+    
+    def snippet(self):
+        return self.body[:50] + '...'
