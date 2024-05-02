@@ -1,23 +1,16 @@
-{% load static %}
+{% extends 'base_layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Articles</title>
-        <link rel="stylesheet" href="{% static 'styles.css' %}">
-    </head>
-    <body>
-        <h1>Article list</h1>
-        <div class="articles">
-            <!-- {%  curly % % curly -- this is used for python code like for loops.  two sets of curly braces {{ -- this is used for actual date, like article.title -->
-            {% for article in articles %}
-                <div class="article">
-                    <h2><a href="#">{{ article.title }}</a></h2>
-                    <p>{{ article.snippet }}</p>
-                    <p>{{ article.date }}</p>
-                </div>
-            {% endfor %}
+<!-- need to add the block content language so it knows where to be intserted in the base_layout file -->
+{% block content %} 
+    <h1>Article list</h1>
+    <div class="articles">
+        <!-- {%  curly % % curly -- this is used for python code like for loops.  two sets of curly braces {{ -- this is used for actual date, like article.title -->
+        {% for article in articles %}
+        <div class="article">
+            <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a></h2>
+            <p>{{ article.snippet }}</p>
+            <p>{{ article.date }}</p>
         </div>
-    </body>
-</html>
+        {% endfor %}
+    </div>
+{% endblock %}

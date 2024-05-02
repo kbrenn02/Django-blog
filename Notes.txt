@@ -90,3 +90,18 @@ Static Files & Images: (images, CSS/Javascript files)
 - We can't just reference paths in our file, we actually have to embed them
 To do this, we need to update the urls.py file in our main app to allow the intake of images via urls
 Then go to settings.py, scroll to the bottom and see that we already have a thing for STATIC_URL (and a path to find static files)
+
+Extending Templates:
+- Extending a base template (that has all the global stuff) in individual templates allows you to make changes that will
+then be covered through the whole website
+- need to have a 'block' tag in the individual templates as well as the 'extends' tab
+
+URL parameters:
+Need to add to the urls.py file in articles to note in the url where we are going
+Every article has a slug when it's made, so we can capture that with: path(r'<slug:slug>/', views.article_detail)
+    and using views.article_detail we can display what we capture so we know we're on the right track
+
+Named URLs:
+Make it so when we click on a link for an article, it goes to the right link
+To add a name to a URL, add a third parameter to the urls in the urlpatterns array in urls.py with ", name='' "
+The name can then be used dynamically in our html files
