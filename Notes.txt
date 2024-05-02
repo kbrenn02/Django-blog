@@ -37,3 +37,15 @@ Whenever we create a new app, we need to register the app in the project.
     1. Go to settings.py in the main app
     2. Add the name under the INSTALLED_APPS section
     3. Include app urls in the main application urls.py file
+
+Django Models:
+Models in python are a class which represent a table in a database
+    - each type of data we have (articles, users, etc) is represented by it's own Models
+    - each model mas to a single table in a database
+in the code:
+    Class Article():
+        title = models.CharField()
+        body = models.TextField()
+each row in the table represents a record.
+Models in the code allow us to create new records and store them in the DB table
+Make the models in the models.py file. After making the models, you need to do a migration so the model shows in the database table
