@@ -27,6 +27,7 @@ urlpatterns = [
     path("about/", views.about),
     path("", views.homepage), #as this is the homepage, there is no route/url path to take so the string is empty
     path("articles/", include('articles.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -108,3 +108,10 @@ The name can then be used dynamically in our html files
 
 Article detail template:
 Uploading Media: 
+
+Accounts App: (to allow users to login in on the front end and create profiles)
+Django has a lot of this functionality already built into it, so we just need to create an accounts app
+Like with other apps, follow the same process of:
+1. python manage.py startapp [name]
+2. log the app in the settings.py file under INSTALLED_APPS
+3. create a urls.py file in the new app
