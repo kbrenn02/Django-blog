@@ -7,7 +7,7 @@ class Article(models.Model):
     body = models.TextField()  
     date = models.DateTimeField(auto_now_add=True)  # when an article is created, the time is automatically generated  
     # later add: thumbnail, author
-    # thumbnail = models.ImageField
+    thumb = models.ImageField(default='default.png', blank=True)
     # author = models.CharField
 
     def __str__(self):  # added this so that when we work in the shell environmnet, we see the title of the article objects we create

@@ -107,3 +107,4 @@ To add a name to a URL, add a third parameter to the urls in the urlpatterns arr
 The name can then be used dynamically in our html files
 
 Article detail template:
+Uploading Media: 
