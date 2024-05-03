@@ -8,4 +8,5 @@ def article_list(request):
     return render(request, 'articles/article_list.html', { 'articles': articles })  #the third parameter is the data we want to send to the template
 
 def article_detail(request, slug):
-    return HttpResponse(slug)
+    article = Article.objects.get(slug=slug)
+    return render(request, 'articles/article_detail.html', {'article': article})

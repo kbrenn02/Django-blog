@@ -105,3 +105,5 @@ Named URLs:
 Make it so when we click on a link for an article, it goes to the right link
 To add a name to a URL, add a third parameter to the urls in the urlpatterns array in urls.py with ", name='' "
 The name can then be used dynamically in our html files
+
+Article detail template:
