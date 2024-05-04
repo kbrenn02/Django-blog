@@ -120,3 +120,6 @@ User Creation Form: (allow user to create an account)
 - we could create the html form from scratch, but django comes with a lot of built in functionality for authentication
     (one of these things is a user creation form that comes with form hints and validation)
     Import the user creation form in the views.py file in the accounts app
+
+Saving users to the DB:
+We want to take the data provided in the user creation form and actually create a user

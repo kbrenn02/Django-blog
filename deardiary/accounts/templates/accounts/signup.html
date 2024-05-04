@@ -3,7 +3,9 @@
 When submit is clicked, it's submitted to /accounts/signup -->
 {% block content %}
     <h1>Signup</h1>
-    <form class="site-form" action="/accounts/signup" method="post"> 
+    <form class="site-form" action="/accounts/signup/" method="post"> 
+        <!-- we need the csrf_token so our site knows that the request is coming from our site and not another site -->
+        {% csrf_token %}
         {{ form }}
         <input type="submit" value="Signup">
     </form>
