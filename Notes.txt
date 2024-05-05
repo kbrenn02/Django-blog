@@ -123,3 +123,8 @@ User Creation Form: (allow user to create an account)
 
 Saving users to the DB:
 We want to take the data provided in the user creation form and actually create a user
+We do this by updating the view that was made for signups. Basically, when a user completes the form, we are sending a request
+    to the signup view again, so we had to edit it to act differently if between being a GET request and a POST request
+
+Login Form:
+In the same accounts.urls.py file, create a url path for login (you'll also have to create a view)

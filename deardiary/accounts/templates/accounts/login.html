@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+    <h1>Login</h1>
+    <!-- the url in the action attribute is the same as hardcoding it (we're just calling the url) -->
+    <form class="site-form" action="{% url 'accounts:login' %}" method="post"> 
+        <!-- we need the csrf_token so our site knows that the request is coming from our site and not another site -->
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="login">
+    </form>
+{% endblock %}
