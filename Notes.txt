@@ -135,3 +135,8 @@ In the same accounts.urls.py file, create a url path for login (you'll also have
 Logging users in (after signup or login):
 import the login file into the views file
 login(request, user)
+
+Logging users out:
+create a logout function in the views.py file that contains a call to the django logout function (from django.contrib.auth import logout)
+Pass the request into the django logout function.
+Create a logout button on the base template so it shows on all pages
