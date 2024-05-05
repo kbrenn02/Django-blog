@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login
 
 # Create your views here.
 
@@ -10,8 +11,9 @@ def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST) #.POST is used to capture data sent via the post request (of submitting the form)
         if form.is_valid():
-            form.save() #save the data to the database if the form is valid
+            user = form.save() #save the data to the database if the form is valid
             #still need to log the user in after they are successfully created
+            login(request, user)
             return redirect('articles:list') #this redirects to the list of articles. 
             # the syntax is articles:list because list is the name of the url in the articles app
     else:
@@ -23,6 +25,8 @@ def login_view(request): #login also has post(fill out form) or get requests(go 
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             #log in the user
+            user = form.get_user()
+            login(request, user)
             return redirect('articles:list')
     else:
         form = AuthenticationForm()
