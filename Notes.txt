@@ -140,3 +140,9 @@ Logging users out:
 create a logout function in the views.py file that contains a call to the django logout function (from django.contrib.auth import logout)
 Pass the request into the django logout function.
 Create a logout button on the base template so it shows on all pages
+
+Protecting pages to only allow logged in users to access:
+Add a decorator to the top of the function (in views.py) you are trying to protect from non-logged in users
+We added a decorator so the user needs to be logged in to create an article. If they aren't, it sends them to the login page
+    We need to make it so that going from the create page to the login page, after logging in it goes back to create page
+    Basically, we need Django to keep track of where we've been so it knows to send us to the right place
