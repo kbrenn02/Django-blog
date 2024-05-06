@@ -176,3 +176,4 @@ We can do this by using an if statement in our base_layout.html file with user.i
 
 Redirecting to the homepage:
 
+Slugifying the title (in the create article page):
