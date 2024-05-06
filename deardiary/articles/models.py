@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Article(models.Model):
@@ -8,7 +9,8 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)  # when an article is created, the time is automatically generated  
     # later add: thumbnail, author
     thumb = models.ImageField(default='default.png', blank=True)
-    # author = models.CharField
+    # later add: author. Have to use a foreign key, and to do that, have to import User above
+    author = models.ForeignKey(User, default=None, on_delete=models.DO_NOTHING)
 
     def __str__(self):  # added this so that when we work in the shell environmnet, we see the title of the article objects we create
         return self.title

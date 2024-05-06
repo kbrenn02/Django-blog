@@ -19,7 +19,10 @@ def article_create(request):
         # when we upload files, they don't come as part of the POST object, they come on the FILES object on the request itself
         form = forms.CreateArticle(request.POST, request.FILES)
         if form.is_valid():
-            # save article to the db
+            instance = form.save(commit=False)
+            # we have access to the user on the request (because the user made the request), so we can grab that user
+            instance.author = request.user
+            instance.save() #this saves the instance with the article
             return redirect('articles:list')
     else:
         form = forms.CreateArticle()

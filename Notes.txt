@@ -163,3 +163,8 @@ To create model forms, in the articles folder, we created the file forms.py
     have all the information we need (or at least make sure to ask for it)
     When the user submits the form, it sends to the original URL. So now we have to update the views.py file to handle 
     a POST request and save the form data to the DB
+
+Foreign Keys:
+Our Article model doesn't have an author component. So we can add the author using the foreign key variable
+If we set our foreign key to User, it means the author needs to be one of the users (there's a dropdown in the backend)
+But on the front end, we want the author to be automatically associated with whomever wrote the article
