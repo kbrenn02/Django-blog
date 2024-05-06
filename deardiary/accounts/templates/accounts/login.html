@@ -8,6 +8,10 @@
         <!-- we need the csrf_token so our site knows that the request is coming from our site and not another site -->
         {% csrf_token %}
         {{ form }}
+        <!-- we want to check if the ?next= variable exists and if it does, redirect the user there -->
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %}
         <input type="submit" value="login">
     </form>
 {% endblock %}

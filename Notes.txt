@@ -146,3 +146,9 @@ Add a decorator to the top of the function (in views.py) you are trying to prote
 We added a decorator so the user needs to be logged in to create an article. If they aren't, it sends them to the login page
     We need to make it so that going from the create page to the login page, after logging in it goes back to create page
     Basically, we need Django to keep track of where we've been so it knows to send us to the right place
+
+Redirect users after login:
+We can see in the url of the login page when we go to /articles/create and we're not logged in, that there is the string:
+?next=/articles/create
+This is our website saying that that is probably where we want to go next. The trick is, how do we capture that
+We can use the .get property on the reqeust object to access teh ?next= variable

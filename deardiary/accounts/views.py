@@ -27,7 +27,13 @@ def login_view(request): #login also has post(fill out form) or get requests(go 
             #log in the user
             user = form.get_user()
             login(request, user)
-            return redirect('articles:list')
+            # check if the next field is in the request. If it is, redirect to that page
+            # so if the user is coming from the create page, next=/articles/create and it will send them back there
+            # if the user is coming straight to the login page, there is no next variable so it sends them to the article list
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('articles:list')
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
