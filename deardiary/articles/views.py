@@ -1,7 +1,8 @@
-from django.shortcuts import render;
+from django.shortcuts import render, redirect;
 from .models import Article;
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 def article_list(request):
@@ -14,4 +15,13 @@ def article_detail(request, slug):
 
 @login_required(login_url='/accounts/login/') #this protects the article_create view
 def article_create(request):
-    return render(request, 'articles/article_create.html')
+    if request.method == 'POST':
+        # when we upload files, they don't come as part of the POST object, they come on the FILES object on the request itself
+        form = forms.CreateArticle(request.POST, request.FILES)
+        if form.is_valid():
+            # save article to the db
+            return redirect('articles:list')
+    else:
+        form = forms.CreateArticle()
+    # if we want to send data to be used in the html template, we have to add the third parameter
+    return render(request, 'articles/article_create.html', {'form':form})

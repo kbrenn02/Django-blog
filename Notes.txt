@@ -151,4 +151,15 @@ Redirect users after login:
 We can see in the url of the login page when we go to /articles/create and we're not logged in, that there is the string:
 ?next=/articles/create
 This is our website saying that that is probably where we want to go next. The trick is, how do we capture that
-We can use the .get property on the reqeust object to access teh ?next= variable
+We can use the .get property on the reqeust object to access the ?next= variable
+
+Model Forms:
+To create model forms, in the articles folder, we created the file forms.py
+    In the forms.py file, from django import forms and from . import models (so we can use the models we made in models.py)
+    We have to create a new class which represents our form
+    Create the Meta class to decide which data from the model we want to show/we want access too
+    Once the form is created, import the form (from . import forms) to the articles.views.py
+    The purpose of this is so when we create a new article on the front end (instead of the admin portal), we
+    have all the information we need (or at least make sure to ask for it)
+    When the user submits the form, it sends to the original URL. So now we have to update the views.py file to handle 
+    a POST request and save the form data to the DB

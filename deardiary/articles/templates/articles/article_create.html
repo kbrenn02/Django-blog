@@ -3,5 +3,11 @@
 {% block content %}
     <div class="create-article">
         <h2>Create an Awesome New Article</h2>
+        <!-- had to add the enctype because we're able to upload content. It's encryption type -->
+        <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create">
+        </form>
     </div>
 {% endblock %}
