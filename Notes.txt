@@ -168,3 +168,11 @@ Foreign Keys:
 Our Article model doesn't have an author component. So we can add the author using the foreign key variable
 If we set our foreign key to User, it means the author needs to be one of the users (there's a dropdown in the backend)
 But on the front end, we want the author to be automatically associated with whomever wrote the article
+
+Checking login status:
+If we're logged out, we should see a login button. If we're logged in, we should see a log out and maybe create article button
+We need our site to know the login status (detect if user is authenticated)
+We can do this by using an if statement in our base_layout.html file with user.is_authenticated
+
+Redirecting to the homepage:
+
