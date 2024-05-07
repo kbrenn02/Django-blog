@@ -34,10 +34,12 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 0;
+    margin-left: 10px;
 }
 
 nav{
     justify-self: end;
+    margin-right: 10px;
 }
 
 nav li{
@@ -67,7 +69,11 @@ nav button{
 }
 
 .article h2{
-    font-size: 1.2em;
+    font-size: 1.4em;
+}
+
+.article p{
+    font-weight: lighter;
 }
 
 .article .author{
@@ -78,10 +84,12 @@ nav button{
     bottom: 0;
     margin: 0;
     color: #0f121f;
+    font-weight: normal;
 }
 
 .article-detail .article{
     padding: 0;
+    text-align: center;
 }
 
 .article-detail .article img{
@@ -91,11 +99,14 @@ nav button{
 .article-detail .article h2{
     text-align: center;
     margin: 20px auto;
-    font-size: 2em;
+    font-size: 1.7em;
+    font-weight: normal;
 }
 
-.article-detail .article p{
-    text-align: center;
+.article-detail .article p.details{
+    text-align: justify;
+    font-weight: lighter;
+    margin: 10px 20px;
 }
 
 .site-form{
@@ -106,7 +117,7 @@ nav button{
 
 .site-form input, .site-form textarea{
     display: block;
-    margin: 20px 0 0 0;
+    margin: 10px 0 20px 0;
     padding: 10px;
 }
 
@@ -118,7 +129,7 @@ a.highlight{
 }
 
 .helptext, .helptext ul{
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
     color: #bbb;
     font-size: 0.9em;
     display: block;
