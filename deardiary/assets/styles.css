@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5{
     margin: 0;
 }
 
+.send{
+    font-family: "Brush Script MT", cursive;
+}
+
 a, a:hover, a:visited{
     color: #fff;
     text-decoration: none;
