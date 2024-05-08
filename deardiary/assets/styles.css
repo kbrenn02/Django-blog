@@ -14,11 +14,9 @@ h1, h2, h3, h4, h5{
     margin: 0;
 }
 
-.send{
-    font-family: 'Times New Roman';
-    font-style: italic;
-    color: #ff5722;
-    /* font-family: 'Comic Sans MS', "Comic Sans", cursive; */
+.send {
+    font-family: 'Comic Sans MS', cursive !important;
+    font-size: 1.3em;
 }
 
 a, a:hover, a:visited{
