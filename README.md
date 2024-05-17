@@ -17,3 +17,5 @@ This should open up the application, likely on port 127.0.0.1:8000, unless this 
 Once you have the applicaiton running on your local device, signup up for an account.
 After your account is created, you will be able to add articles for everyone to read (please only post appropraite content)
 
+### FINAL PROJECT V1:
+{inset loom demo}
