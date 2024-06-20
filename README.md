@@ -14,8 +14,8 @@ To run the Dear Diary program on your local device:
 This should open up the application, likely on port 127.0.0.1:8000, unless this port is already in use
 
 ### Usage Instructions
-Once you have the applicaiton running on your local device, signup up for an account.
+Once you have the application running on your local device, signup up for an account.
 After your account is created, you will be able to add articles for everyone to read (please only post appropraite content)
 
 ### FINAL PROJECT V1:
-{inset loom demo}
+[{Loom demo}](https://www.loom.com/share/0da1398568354b23945371f032a2354a?sid=1a0a8966-c14d-44a9-ab3d-0e5afa92b12f)
